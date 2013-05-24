@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>design-pattern-snippets</groupId>
+    <artifactId>design-pattern-snippets</artifactId>
+    <version>0.0.1</version>
+    
+    <scm>
+        <connection>scm:svn:https://design-pattern-snippets.googlecode.com/svn/</connection>
+    </scm>
+    
+    <properties>
+        <openjpa.version>2.2.0</openjpa.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+        <maven.compile.encoding>UTF-8</maven.compile.encoding>
+    </properties>
+
+
+    <build>
+        <plugins>
+        
+            
+            
+            <!-- compile -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId> 
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <fork>true</fork>
+                </configuration>
+                
+            </plugin>
+            
+            
+            <!-- generate-test-sources -->
+            <!-- process-test-sources -->
+            <!-- generate-test-resources -->
+            <!-- process-test-resources  -->
+            <!-- test-compile -->
+            <!-- process-test-classes -->
+            
+            
+            <!-- test -->
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.11</version>
+                <configuration>                   
+                    <junitArtifactName>junit:junit</junitArtifactName>
+                    <encoding>UTF-8</encoding>
+                    <inputEncoding>UTF-8</inputEncoding>
+                    <outputEncoding>UTF-8</outputEncoding>
+                    <!-- every jUnit test in new JVM instance (fork) in serial mode, i.e. one by one.  -->
+                    <forkMode>always</forkMode> 
+                    <argLine>-Dfile.encoding=UTF-8 -Xmx1024m -Xms1024m</argLine>
+                </configuration>
+            </plugin>
+            
+            
+            <!-- prepare-package -->
+            
+            
+            
+            <!-- package -->
+
+            
+            
+            <!-- pre-integration-test -->
+            
+            
+            <!-- integration-test -->
+            
+            <!-- post-integration-test -->
+            <!-- verify -->
+            <!-- install -->
+            <!-- deploy -->
+
+        </plugins>
+    </build>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>        
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+                                
+        
+    </dependencies>
+</project>
